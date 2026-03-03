@@ -1,0 +1,60 @@
+\documentclass[12pt, a4paper]{article}
+
+% --- Importar configuración ---
+\input{Utils/paquetes}
+\input{Utils/colores}
+\input{Utils/comandos}
+\input{Utils/estilo}
+
+% --- Configuración de Bibliografía ---
+\addbibresource{referencias.bib}  % Necesario tener este archivo en el mismo nivel que el main
+
+\begin{document}
+
+% ---------------------------------------------------------
+% 1. PORTADA Y FRONTMATTER
+% ---------------------------------------------------------
+\input{Utils/portada}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+\clearpage
+\frontmatter
+
+% Abstract
+\input{Secciones/00_Abstract.tex}
+
+\tableofcontents % Índice general
+\clearpage
+
+%\listoftables % Índice de tablas
+%\listoffigures % Índice de figuras
+\clearpage
+
+% ---------------------------------------------------------
+% 2. CUERPO DEL DOCUMENTO 
+% ---------------------------------------------------------
+\clearpage
+\pagenumbering{arabic} 
+
+\input{Secciones/01_Intro}
+
+\clearpage
+
+% ---------------------------------------------------------
+% 3. BACKMATTER: ANEXOS Y BIBLIOGRAFÍA 
+% ---------------------------------------------------------
+\pagenumbering{Roman} 
+
+% Anexos
+\appendix 
+
+\clearpage
+
+% Bibliografía
+\printbibliography[heading=bibintoc, title={Referencias}]
+
+\end{document}
