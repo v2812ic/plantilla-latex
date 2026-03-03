@@ -1,0 +1,40 @@
+% --- Indentación ---
+\setlength{\parindent}{0pt} 
+
+% --- Configuración de Encabezado y Pie de página ---
+\pagestyle{fancy}
+\fancyhf{} 
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headsep}{2.2cm} % Separación entre línea de header y resto de página
+
+\fancyhead[L]{\textcolor{ColorSecundario}{\itshape \leftmark}}
+\fancyhead[R]{\includegraphics[height=0.8cm]{logo}} 
+
+\fancyfoot[R]{\textcolor{ColorPrincipal}{\normalfont\textbf{\thepage}}} 
+
+\newcommand{\frontmatter}{
+  \cleardoublepage
+  \pagenumbering{roman}
+  \renewcommand{\thepage}{\roman{page}}
+}
+
+% --- Configuración de títulos de sección ---
+\titleformat{\section}
+  {\Large\bfseries\color{ColorPrincipal}}
+  {\thesection.\quad}{0pt}{}
+
+\titleformat{\section}
+  {\Large\bfseries\color{ColorPrincipal}}
+  {\thesection.\quad}{0pt}{}
+
+\titlespacing*{\section}{0pt}{2.5cm}{0.3cm} % tercer parentesis separación entre título y resto del cuerpo
+
+\titleformat{\subsection}
+  {\large\bfseries\color{ColorPrincipal!80!black}}
+  {\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{0.75cm}{0.3cm} 
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{ColorSecundario}}
+  {\thesubsubsection}{1em}{}

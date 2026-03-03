@@ -1,0 +1,31 @@
+\usepackage[utf8]{inputenc}
+\usepackage{fontenc}
+\usepackage[spanish, es-tabla]{babel}
+
+
+% --- Márgenes ---
+\usepackage{geometry} 
+\geometry{top=3cm, bottom=3cm, left=2.5cm, right=3.5cm}
+
+% --- Gráficos y Multimedia ---
+\usepackage{graphicx}
+\graphicspath{{Media/}{Imagenes/}} 
+
+% --- Diseño y Estilos ---
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage[titletoc,title]{appendix} 
+
+% --- Bibliografía (BibLaTeX) ---
+\usepackage{csquotes}
+\usepackage[backend=biber, style=numeric]{biblatex} 
+
+% --- Hipervínculos ---
+% workaround for LaTeX hooks error on \@makecaption (MiKTeX 2026.x bug)
+\makeatletter
+\let\orig@makecaption\@makecaption
+\def\@makecaption#1#2{\orig@makecaption{#1}{#2}}
+\makeatother
+\usepackage{hyperref}
